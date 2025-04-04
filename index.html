@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 공무원 보고서 작성 도우미 - 대시보드</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="AI 공무원 보고서 작성 도우미 로고">
+                <h1>AI 공무원 보고서 작성 도우미</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> 홈</a></li>
+                    <li><a href="#"><i class="fas fa-file-alt"></i> 내 보고서</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> 고객지원</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="profile-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-dropdown">
+                    <span>홍길동님</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fas fa-user"></i> 내 프로필</a>
+                        <a href="#"><i class="fas fa-cog"></i> 설정</a>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-banner">
+            <div class="container">
+                <div class="banner-content">
+                    <h2>AI 기술로 더 빠르고 정확한 공무 보고서를 작성하세요</h2>
+                    <p>입력한 정보를 바탕으로 AI가 목차부터 내용까지 자동으로 생성해주는 서비스입니다.</p>
+                    <a href="create-report.html" class="btn btn-primary"><i class="fas fa-plus"></i> 새 보고서 작성하기</a>
+                </div>
+                <div class="banner-image">
+                    <img src="assets/images/banner.jpg" alt="보고서 작성 이미지">
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-reports">
+            <div class="container">
+                <div class="section-header">
+                    <h2>최근 작업 내역</h2>
+                    <a href="#" class="view-all">전체보기 <i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <div class="report-status completed">
+                            <i class="fas fa-check-circle"></i> 완료
+                        </div>
+                        <h3>2023년 4분기 업무 보고서</h3>
+                        <div class="report-meta">
+                            <span><i class="far fa-calendar-alt"></i> 2023-12-28</span>
+                            <span><i class="far fa-file-alt"></i> 한글파일(HWP)</span>
+                        </div>
+                        <div class="report-actions">
+                            <a href="#" class="btn btn-outline"><i class="fas fa-download"></i> 다운로드</a>
+                            <a href="#" class="btn btn-outline"><i class="fas fa-edit"></i> 수정</a>
+                        </div>
+                    </div>
+                    <div class="report-card">
+                        <div class="report-status in-progress">
+                            <i class="fas fa-clock"></i> 진행중
+                        </div>
+                        <h3>2024년 상반기 예산 계획안</h3>
+                        <div class="report-meta">
+                            <span><i class="far fa-calendar-alt"></i> 2024-01-05</span>
+                            <span><i class="far fa-file-alt"></i> 한글파일(HWP)</span>
+                        </div>
+                        <div class="report-actions">
+                            <a href="generate-report.html" class="btn btn-outline"><i class="fas fa-play"></i> 계속하기</a>
+                            <a href="#" class="btn btn-outline"><i class="fas fa-trash-alt"></i> 삭제</a>
+                        </div>
+                    </div>
+                    <div class="report-card">
+                        <div class="report-status draft">
+                            <i class="fas fa-pencil-alt"></i> 초안
+                        </div>
+                        <h3>민원 처리 현황 월간 보고서</h3>
+                        <div class="report-meta">
+                            <span><i class="far fa-calendar-alt"></i> 2024-01-10</span>
+                            <span><i class="far fa-file-alt"></i> 한글파일(HWP)</span>
+                        </div>
+                        <div class="report-actions">
+                            <a href="create-toc.html" class="btn btn-outline"><i class="fas fa-play"></i> 계속하기</a>
+                            <a href="#" class="btn btn-outline"><i class="fas fa-trash-alt"></i> 삭제</a>
+                        </div>
+                    </div>
+                    <div class="add-new-card">
+                        <a href="create-report.html" class="add-new-link">
+                            <div class="add-icon"><i class="fas fa-plus"></i></div>
+                            <span>새 보고서 작성하기</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>서비스 특징</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>AI 자동 작성</h3>
+                        <p>핵심 정보만 입력하면 AI가 전문적인 보고서를 자동으로 작성해줍니다.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>다양한 템플릿</h3>
+                        <p>목적과 상황에 맞는 다양한 보고서 템플릿을 선택할 수 있습니다.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <h3>한글파일 지원</h3>
+                        <p>완성된 보고서를 한글파일(HWP) 또는 PDF로 다운로드할 수 있습니다.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>보안 강화</h3>
+                        <p>모든 데이터는 안전하게 암호화되어 보관되며 개인정보를 철저히 보호합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.svg" alt="AI 공무원 보고서 작성 도우미 로고">
+                    <p>AI 공무원 보고서 작성 도우미</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-group">
+                        <h4>이용안내</h4>
+                        <ul>
+                            <li><a href="#">서비스 소개</a></li>
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>고객지원</h4>
+                        <ul>
+                            <li><a href="#">문의하기</a></li>
+                            <li><a href="#">피드백 제출</a></li>
+                            <li><a href="#">오류 신고</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>법적 정보</h4>
+                        <ul>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">저작권 정책</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI 공무원 보고서 작성 도우미. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

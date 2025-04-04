@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보고서 양식 선택 - AI 공무원 보고서 작성 도우미</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="AI 공무원 보고서 작성 도우미 로고">
+                <h1>AI 공무원 보고서 작성 도우미</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> 홈</a></li>
+                    <li><a href="#" class="active"><i class="fas fa-file-alt"></i> 내 보고서</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> 고객지원</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="profile-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-dropdown">
+                    <span>홍길동님</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fas fa-user"></i> 내 프로필</a>
+                        <a href="#"><i class="fas fa-cog"></i> 설정</a>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="form-page">
+        <div class="container">
+            <div class="page-header">
+                <h2>보고서 양식 선택</h2>
+                <p>보고서에 적용할 양식을 선택해주세요.</p>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-step completed">
+                    <div class="step-number"><i class="fas fa-check"></i></div>
+                    <div class="step-label">정보 입력</div>
+                </div>
+                <div class="progress-line completed"></div>
+                <div class="progress-step completed">
+                    <div class="step-number"><i class="fas fa-check"></i></div>
+                    <div class="step-label">목차 생성</div>
+                </div>
+                <div class="progress-line completed"></div>
+                <div class="progress-step active">
+                    <div class="step-number">3</div>
+                    <div class="step-label">양식 선택</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">보고서 생성</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-number">5</div>
+                    <div class="step-label">다운로드</div>
+                </div>
+            </div>
+
+            <div class="report-summary">
+                <h3>2024년 상반기 업무 보고서</h3>
+                <div class="summary-details">
+                    <div class="summary-item">
+                        <span class="label">작성자:</span>
+                        <span class="value">홍길동 (총무과)</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">작성일:</span>
+                        <span class="value">2024-01-25</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">문서형식:</span>
+                        <span class="value">한글(HWP)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="template-filters">
+                <div class="filter-group">
+                    <label for="templateCategory">카테고리</label>
+                    <select id="templateCategory">
+                        <option value="all" selected>전체 보기</option>
+                        <option value="official">공식 문서</option>
+                        <option value="briefing">브리핑 자료</option>
+                        <option value="report">보고서</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="templateSort">정렬 기준</label>
+                    <select id="templateSort">
+                        <option value="recommend" selected>추천순</option>
+                        <option value="popular">인기순</option>
+                        <option value="newest">최신순</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="양식 검색">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+
+            <div class="templates-grid">
+                <div class="template-card selected">
+                    <div class="template-preview">
+                        <img src="assets/images/templates/template1.png" alt="표준 공문서 양식">
+                        <div class="template-badge recommended">추천</div>
+                    </div>
+                    <div class="template-info">
+                        <h3>표준 공문서 양식</h3>
+                        <p>공문서 표준 양식으로, 정부 부처 간 공식 문서 작성에 적합합니다.</p>
+                        <div class="template-meta">
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                            <span><i class="fas fa-download"></i> 2.5k</span>
+                        </div>
+                    </div>
+                    <div class="template-select">
+                        <label class="radio-container">
+                            <input type="radio" name="template" checked>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-preview">
+                        <img src="assets/images/templates/template2.png" alt="업무 보고서 양식">
+                        <div class="template-badge popular">인기</div>
+                    </div>
+                    <div class="template-info">
+                        <h3>업무 보고서 양식</h3>
+                        <p>부서 내 업무 보고를 위한 깔끔한 디자인의 보고서 템플릿입니다.</p>
+                        <div class="template-meta">
+                            <span><i class="fas fa-star"></i> 4.6</span>
+                            <span><i class="fas fa-download"></i> 3.2k</span>
+                        </div>
+                    </div>
+                    <div class="template-select">
+                        <label class="radio-container">
+                            <input type="radio" name="template">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-preview">
+                        <img src="assets/images/templates/template3.png" alt="브리핑 자료 양식">
+                    </div>
+                    <div class="template-info">
+                        <h3>브리핑 자료 양식</h3>
+                        <p>발표용 자료로 활용하기 좋은 시각적 요소가 강화된 템플릿입니다.</p>
+                        <div class="template-meta">
+                            <span><i class="fas fa-star"></i> 4.5</span>
+                            <span><i class="fas fa-download"></i> 1.8k</span>
+                        </div>
+                    </div>
+                    <div class="template-select">
+                        <label class="radio-container">
+                            <input type="radio" name="template">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-preview">
+                        <img src="assets/images/templates/template4.png" alt="연구 보고서 양식">
+                    </div>
+                    <div class="template-info">
+                        <h3>연구 보고서 양식</h3>
+                        <p>연구 결과를 체계적으로 정리할 수 있는 학술적인 템플릿입니다.</p>
+                        <div class="template-meta">
+                            <span><i class="fas fa-star"></i> 4.3</span>
+                            <span><i class="fas fa-download"></i> 1.2k</span>
+                        </div>
+                    </div>
+                    <div class="template-select">
+                        <label class="radio-container">
+                            <input type="radio" name="template">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-preview">
+                        <img src="assets/images/templates/template5.png" alt="회의록 양식">
+                    </div>
+                    <div class="template-info">
+                        <h3>회의록 양식</h3>
+                        <p>회의 내용과 결과를 명확하게 기록할 수 있는 회의록 템플릿입니다.</p>
+                        <div class="template-meta">
+                            <span><i class="fas fa-star"></i> 4.4</span>
+                            <span><i class="fas fa-download"></i> 2.1k</span>
+                        </div>
+                    </div>
+                    <div class="template-select">
+                        <label class="radio-container">
+                            <input type="radio" name="template">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <div class="template-preview">
+                        <img src="assets/images/templates/template6.png" alt="제안서 양식">
+                    </div>
+                    <div class="template-info">
+                        <h3>제안서 양식</h3>
+                        <p>새로운 정책이나 사업을 제안하기 위한 구조화된 템플릿입니다.</p>
+                        <div class="template-meta">
+                            <span><i class="fas fa-star"></i> 4.2</span>
+                            <span><i class="fas fa-download"></i> 1.5k</span>
+                        </div>
+                    </div>
+                    <div class="template-select">
+                        <label class="radio-container">
+                            <input type="radio" name="template">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="template-preview-modal">
+                <div class="template-preview-content">
+                    <button class="close-modal"><i class="fas fa-times"></i></button>
+                    <h3>표준 공문서 양식</h3>
+                    <div class="preview-image">
+                        <img src="assets/images/templates/template1_large.png" alt="표준 공문서 양식 상세보기">
+                    </div>
+                    <div class="template-details">
+                        <div class="details-section">
+                            <h4>템플릿 특징</h4>
+                            <ul>
+                                <li>공식 문서 표준 규격 준수</li>
+                                <li>명확한 문단 구분과 가독성</li>
+                                <li>공문번호 및 관련 참조 영역</li>
+                                <li>결재 흐름 표시 영역</li>
+                            </ul>
+                        </div>
+                        <div class="details-section">
+                            <h4>적합한 용도</h4>
+                            <ul>
+                                <li>부처 간 공식 문서 교환</li>
+                                <li>결재가 필요한 공식 문서</li>
+                                <li>정책 발표 및 안내 문서</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="template-actions">
+                        <button class="btn btn-primary">이 양식 선택하기</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn btn-outline" onclick="location.href='create-toc.html'">이전 단계</button>
+                <button type="submit" class="btn btn-primary" onclick="location.href='generate-report.html'; return false;">다음 단계</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.svg" alt="AI 공무원 보고서 작성 도우미 로고">
+                    <p>AI 공무원 보고서 작성 도우미</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-group">
+                        <h4>이용안내</h4>
+                        <ul>
+                            <li><a href="#">서비스 소개</a></li>
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>고객지원</h4>
+                        <ul>
+                            <li><a href="#">문의하기</a></li>
+                            <li><a href="#">피드백 제출</a></li>
+                            <li><a href="#">오류 신고</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>법적 정보</h4>
+                        <ul>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">저작권 정책</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI 공무원 보고서 작성 도우미. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/templates.js"></script>
+</body>
+</html>

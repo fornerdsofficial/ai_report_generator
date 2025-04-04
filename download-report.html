@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보고서 다운로드 - AI 공무원 보고서 작성 도우미</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+    <link rel="stylesheet" href="assets/css/preview.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="AI 공무원 보고서 작성 도우미 로고">
+                <h1>AI 공무원 보고서 작성 도우미</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> 홈</a></li>
+                    <li><a href="#" class="active"><i class="fas fa-file-alt"></i> 내 보고서</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> 고객지원</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="profile-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-dropdown">
+                    <span>홍길동님</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fas fa-user"></i> 내 프로필</a>
+                        <a href="#"><i class="fas fa-cog"></i> 설정</a>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="form-page">
+        <div class="container">
+            <div class="page-header">
+                <h2>보고서 다운로드</h2>
+                <p>생성된 보고서를 확인하고 다운로드하세요.</p>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-step completed">
+                    <div class="step-number"><i class="fas fa-check"></i></div>
+                    <div class="step-label">정보 입력</div>
+                </div>
+                <div class="progress-line completed"></div>
+                <div class="progress-step completed">
+                    <div class="step-number"><i class="fas fa-check"></i></div>
+                    <div class="step-label">목차 생성</div>
+                </div>
+                <div class="progress-line completed"></div>
+                <div class="progress-step completed">
+                    <div class="step-number"><i class="fas fa-check"></i></div>
+                    <div class="step-label">양식 선택</div>
+                </div>
+                <div class="progress-line completed"></div>
+                <div class="progress-step completed">
+                    <div class="step-number"><i class="fas fa-check"></i></div>
+                    <div class="step-label">보고서 생성</div>
+                </div>
+                <div class="progress-line completed"></div>
+                <div class="progress-step active">
+                    <div class="step-number">5</div>
+                    <div class="step-label">다운로드</div>
+                </div>
+            </div>
+
+            <div class="report-summary">
+                <h3>2024년 상반기 업무 보고서</h3>
+                <div class="summary-details">
+                    <div class="summary-item">
+                        <span class="label">작성자:</span>
+                        <span class="value">홍길동 (총무과)</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">작성일:</span>
+                        <span class="value">2024-01-25</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">문서형식:</span>
+                        <span class="value">한글(HWP)</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">페이지 수:</span>
+                        <span class="value">12 페이지</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="download-container">
+                <div class="preview-container">
+                    <div class="preview-header">
+                        <h3>미리보기</h3>
+                        <div class="preview-controls">
+                            <button class="preview-control-btn" id="zoomOut"><i class="fas fa-search-minus"></i></button>
+                            <span class="zoom-level">100%</span>
+                            <button class="preview-control-btn" id="zoomIn"><i class="fas fa-search-plus"></i></button>
+                        </div>
+                    </div>
+                    <div class="preview-content">
+                        <div class="preview-page">
+                            <img src="assets/images/results/result1.png" alt="보고서 미리보기 페이지 1">
+                        </div>
+                        <div class="preview-page">
+                            <img src="assets/images/results/result2.png" alt="보고서 미리보기 페이지 2">
+                        </div>
+                        <div class="preview-page">
+                            <img src="assets/images/results/result3.png" alt="보고서 미리보기 페이지 3">
+                        </div>
+                        <div class="preview-page">
+                            <img src="assets/images/results/result4.png" alt="보고서 미리보기 페이지 4">
+                        </div>
+                        <div class="preview-page">
+                            <img src="assets/images/results/result5.png" alt="보고서 미리보기 페이지 5">
+                        </div>
+                    </div>
+                    <div class="preview-pagination">
+                        <button class="pagination-btn"><i class="fas fa-chevron-left"></i></button>
+                        <span class="page-indicator">1 / 12</span>
+                        <button class="pagination-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                
+                <div class="download-options">
+                    <div class="options-section">
+                        <h3>다운로드 옵션</h3>
+                        <div class="option-group">
+                            <label for="fileFormat">파일 형식</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="formatHWP" name="fileFormat" value="hwp" checked>
+                                    <label for="formatHWP">한글(HWP)</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="formatPDF" name="fileFormat" value="pdf">
+                                    <label for="formatPDF">PDF</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="formatDOCX" name="fileFormat" value="docx">
+                                    <label for="formatDOCX">Word(DOCX)</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="option-group">
+                            <label for="includeOptions">포함 옵션</label>
+                            <div class="checkbox-group">
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="includeCover" name="includeOptions" value="cover" checked>
+                                    <label for="includeCover">표지 포함</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="includeToc" name="includeOptions" value="toc" checked>
+                                    <label for="includeToc">목차 포함</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="includePageNum" name="includeOptions" value="pagenum" checked>
+                                    <label for="includePageNum">페이지 번호 포함</label>
+                                </div>
+                                <div class="checkbox-option">
+                                    <input type="checkbox" id="includeAppendix" name="includeOptions" value="appendix">
+                                    <label for="includeAppendix">부록 포함</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="options-section">
+                        <h3>추가 작업</h3>
+                        <div class="action-buttons">
+                            <button class="btn btn-outline"><i class="fas fa-envelope"></i> 이메일로 전송</button>
+                            <button class="btn btn-outline"><i class="fas fa-cloud-upload-alt"></i> 클라우드에 저장</button>
+                            <button class="btn btn-outline"><i class="fas fa-edit"></i> 내용 수정하기</button>
+                        </div>
+                    </div>
+                    
+                    <div class="download-actions">
+                        <button class="btn btn-primary btn-large">
+                            <i class="fas fa-download"></i> 다운로드
+                        </button>
+                        <div class="action-helper">
+                            <a href="#" class="btn-text"><i class="fas fa-history"></i> 이전 단계로 돌아가기</a>
+                            <a href="#" class="btn-text"><i class="fas fa-home"></i> 홈으로 이동</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="download-success-modal" style="display: none;">
+                <div class="modal-content">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>다운로드가 완료되었습니다!</h3>
+                    <p>보고서가 성공적으로 다운로드되었습니다.</p>
+                    <div class="modal-actions">
+                        <button class="btn btn-outline">새 보고서 작성하기</button>
+                        <button class="btn btn-primary">홈으로 이동</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.svg" alt="AI 공무원 보고서 작성 도우미 로고">
+                    <p>AI 공무원 보고서 작성 도우미</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-group">
+                        <h4>이용안내</h4>
+                        <ul>
+                            <li><a href="#">서비스 소개</a></li>
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>고객지원</h4>
+                        <ul>
+                            <li><a href="#">문의하기</a></li>
+                            <li><a href="#">피드백 제출</a></li>
+                            <li><a href="#">오류 신고</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>법적 정보</h4>
+                        <ul>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">저작권 정책</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI 공무원 보고서 작성 도우미. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/preview-pagination.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 다운로드 버튼 클릭 시 모달 표시
+            document.querySelector('.btn-primary.btn-large').addEventListener('click', function() {
+                // 실제로는 다운로드 로직이 먼저 실행되어야 함
+                setTimeout(function() {
+                    document.querySelector('.download-success-modal').style.display = 'flex';
+                }, 1000);
+            });
+            
+            // 모달 내 버튼 클릭 시 페이지 이동
+            document.querySelector('.download-success-modal .btn-primary').addEventListener('click', function() {
+                window.location.href = 'index.html';
+            });
+            
+            document.querySelector('.download-success-modal .btn-outline').addEventListener('click', function() {
+                window.location.href = 'create-report.html';
+            });
+        });
+    </script>
+</body>
+</html>

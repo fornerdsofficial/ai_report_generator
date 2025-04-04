@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보고서 생성 - AI 공무원 보고서 작성 도우미</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="AI 공무원 보고서 작성 도우미 로고">
+                <h1>AI 공무원 보고서 작성 도우미</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> 홈</a></li>
+                    <li><a href="#" class="active"><i class="fas fa-file-alt"></i> 내 보고서</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> 고객지원</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="profile-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-dropdown">
+                    <span>홍길동님</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fas fa-user"></i> 내 프로필</a>
+                        <a href="#"><i class="fas fa-cog"></i> 설정</a>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="form-page">
+        <div class="container">
+            <div class="page-header">
+                <h2>보고서 생성</h2>
+                <p>AI가 보고서를 생성하고 있습니다. 잠시만 기다려주세요.</p>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-step completed">
+                    <div class="step-number"><i class="fas fa-check"></i></div>
+                    <div class="step-label">정보 입력</div>
+                </div>
+                <div class="progress-line completed"></div>
+                <div class="progress-step completed">
+                    <div class="step-number"><i class="fas fa-check"></i></div>
+                    <div class="step-label">목차 생성</div>
+                </div>
+                <div class="progress-line completed"></div>
+                <div class="progress-step completed">
+                    <div class="step-number"><i class="fas fa-check"></i></div>
+                    <div class="step-label">양식 선택</div>
+                </div>
+                <div class="progress-line completed"></div>
+                <div class="progress-step active">
+                    <div class="step-number">4</div>
+                    <div class="step-label">보고서 생성</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-number">5</div>
+                    <div class="step-label">다운로드</div>
+                </div>
+            </div>
+
+            <div class="report-summary">
+                <h3>2024년 상반기 업무 보고서</h3>
+                <div class="summary-details">
+                    <div class="summary-item">
+                        <span class="label">작성자:</span>
+                        <span class="value">홍길동 (총무과)</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">작성일:</span>
+                        <span class="value">2024-01-25</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">문서형식:</span>
+                        <span class="value">한글(HWP)</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="label">선택 양식:</span>
+                        <span class="value">표준 공문서 양식</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="generation-container">
+                <div class="generation-progress-bar">
+                    <div class="progress-value" id="progressValue" style="width: 65%;"></div>
+                </div>
+                <div class="progress-percentage">65%</div>
+                
+                <div class="generation-steps">
+                    <div class="generation-step completed">
+                        <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="step-details">
+                            <h4>목차 분석</h4>
+                            <p>목차 구조를 분석하고 계층 관계를 파악합니다.</p>
+                        </div>
+                    </div>
+                    <div class="generation-step completed">
+                        <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                        <div class="step-details">
+                            <h4>서론 작성</h4>
+                            <p>보고서 개요와 목적에 맞는 서론 부분을 작성합니다.</p>
+                        </div>
+                    </div>
+                    <div class="generation-step in-progress">
+                        <div class="step-icon"><i class="fas fa-spinner fa-spin"></i></div>
+                        <div class="step-details">
+                            <h4>본문 작성</h4>
+                            <p>각 섹션별 내용을 자세히 구성하고 작성합니다.</p>
+                        </div>
+                    </div>
+                    <div class="generation-step">
+                        <div class="step-icon"><i class="far fa-circle"></i></div>
+                        <div class="step-details">
+                            <h4>결론 작성</h4>
+                            <p>전체 내용을 요약하고 적절한 결론을 도출합니다.</p>
+                        </div>
+                    </div>
+                    <div class="generation-step">
+                        <div class="step-icon"><i class="far fa-circle"></i></div>
+                        <div class="step-details">
+                            <h4>서식 적용</h4>
+                            <p>선택한 양식에 맞게 문서 서식을 적용합니다.</p>
+                        </div>
+                    </div>
+                    <div class="generation-step">
+                        <div class="step-icon"><i class="far fa-circle"></i></div>
+                        <div class="step-details">
+                            <h4>최종 검토</h4>
+                            <p>맞춤법, 문법, 내용의 일관성을 검토합니다.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="generation-log">
+                    <h4>진행 상황</h4>
+                    <div class="log-container">
+                        <div class="log-entry">
+                            <span class="log-time">14:32:05</span>
+                            <span class="log-message">보고서 생성 시작...</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:32:10</span>
+                            <span class="log-message">목차 분석 중...</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:32:25</span>
+                            <span class="log-message">목차 분석 완료</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:32:30</span>
+                            <span class="log-message">서론 작성 중...</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:33:15</span>
+                            <span class="log-message">서론 작성 완료</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:33:20</span>
+                            <span class="log-message">본문 작성 중... (1/3)</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:34:05</span>
+                            <span class="log-message">본문 작성 중... (2/3)</span>
+                        </div>
+                        <div class="log-entry">
+                            <span class="log-time">14:34:45</span>
+                            <span class="log-message">현재 '주요 추진 실적' 섹션 작성 중...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="generation-actions">
+                <button type="button" class="btn btn-outline" id="cancelGeneration">
+                    <i class="fas fa-times"></i> 취소하기
+                </button>
+                <div class="generation-message">
+                    <p><i class="fas fa-info-circle"></i> 완료까지 약 2분 정도 소요됩니다.</p>
+                </div>
+                <button type="button" class="btn btn-primary" id="continueToDowload" style="display: none;" onclick="location.href='download-report.html'">
+                    <i class="fas fa-check"></i> 다운로드 화면으로
+                </button>
+            </div>
+
+            <div class="cancel-modal" id="cancelModal" style="display: none;">
+                <div class="modal-content">
+                    <h3>보고서 생성을 취소하시겠습니까?</h3>
+                    <p>취소하면 지금까지 생성된 내용이 저장되지 않습니다.</p>
+                    <div class="modal-actions">
+                        <button class="btn btn-outline" id="resumeGeneration">계속 진행하기</button>
+                        <button class="btn btn-danger" id="confirmCancel">보고서 생성 취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.svg" alt="AI 공무원 보고서 작성 도우미 로고">
+                    <p>AI 공무원 보고서 작성 도우미</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-group">
+                        <h4>이용안내</h4>
+                        <ul>
+                            <li><a href="#">서비스 소개</a></li>
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>고객지원</h4>
+                        <ul>
+                            <li><a href="#">문의하기</a></li>
+                            <li><a href="#">피드백 제출</a></li>
+                            <li><a href="#">오류 신고</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>법적 정보</h4>
+                        <ul>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">저작권 정책</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI 공무원 보고서 작성 도우미. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // 시뮬레이션을 위한 간단한 스크립트
+        document.addEventListener('DOMContentLoaded', function() {
+            const cancelBtn = document.getElementById('cancelGeneration');
+            const cancelModal = document.getElementById('cancelModal');
+            const resumeBtn = document.getElementById('resumeGeneration');
+            const confirmCancelBtn = document.getElementById('confirmCancel');
+            const continueBtn = document.getElementById('continueToDowload');
+            
+            // 취소 버튼 클릭 시 모달 표시
+            cancelBtn.addEventListener('click', function() {
+                cancelModal.style.display = 'flex';
+            });
+            
+            // 계속 진행 버튼 클릭 시 모달 닫기
+            resumeBtn.addEventListener('click', function() {
+                cancelModal.style.display = 'none';
+            });
+            
+            // 취소 확인 버튼 클릭 시 메인 페이지로 이동
+            confirmCancelBtn.addEventListener('click', function() {
+                window.location.href = 'index.html';
+            });
+            
+            // 생성 진행 상태 시뮬레이션
+            simulateProgress();
+        });
+        
+        function simulateProgress() {
+            let progress = 65;
+            const progressBar = document.getElementById('progressValue');
+            const percentText = document.querySelector('.progress-percentage');
+            const logContainer = document.querySelector('.log-container');
+            const continueBtn = document.getElementById('continueToDowload');
+            const cancelBtn = document.getElementById('cancelGeneration');
+            
+            const interval = setInterval(function() {
+                if (progress < 100) {
+                    progress += 5;
+                    progressBar.style.width = progress + '%';
+                    percentText.textContent = progress + '%';
+                    
+                    // 로그 메시지 추가
+                    if (progress === 70) {
+                        addLogEntry('14:35:10', '본문 작성 중... (3/3)');
+                    } else if (progress === 80) {
+                        addLogEntry('14:35:40', '본문 작성 완료');
+                        addLogEntry('14:35:45', '결론 작성 중...');
+                        
+                        // 결론 작성 단계 활성화
+                        document.querySelectorAll('.generation-step')[3].classList.add('in-progress');
+                        document.querySelectorAll('.generation-step')[3].querySelector('.step-icon i').className = 'fas fa-spinner fa-spin';
+                        
+                        // 본문 작성 단계 완료 표시
+                        document.querySelectorAll('.generation-step')[2].classList.remove('in-progress');
+                        document.querySelectorAll('.generation-step')[2].classList.add('completed');
+                        document.querySelectorAll('.generation-step')[2].querySelector('.step-icon i').className = 'fas fa-check-circle';
+                    } else if (progress === 85) {
+                        addLogEntry('14:36:10', '결론 작성 완료');
+                        addLogEntry('14:36:15', '서식 적용 중...');
+                        
+                        // 서식 적용 단계 활성화
+                        document.querySelectorAll('.generation-step')[4].classList.add('in-progress');
+                        document.querySelectorAll('.generation-step')[4].querySelector('.step-icon i').className = 'fas fa-spinner fa-spin';
+                        
+                        // 결론 작성 단계 완료 표시
+                        document.querySelectorAll('.generation-step')[3].classList.remove('in-progress');
+                        document.querySelectorAll('.generation-step')[3].classList.add('completed');
+                        document.querySelectorAll('.generation-step')[3].querySelector('.step-icon i').className = 'fas fa-check-circle';
+                    } else if (progress === 95) {
+                        addLogEntry('14:36:35', '서식 적용 완료');
+                        addLogEntry('14:36:40', '최종 검토 중...');
+                        
+                        // 최종 검토 단계 활성화
+                        document.querySelectorAll('.generation-step')[5].classList.add('in-progress');
+                        document.querySelectorAll('.generation-step')[5].querySelector('.step-icon i').className = 'fas fa-spinner fa-spin';
+                        
+                        // 서식 적용 단계 완료 표시
+                        document.querySelectorAll('.generation-step')[4].classList.remove('in-progress');
+                        document.querySelectorAll('.generation-step')[4].classList.add('completed');
+                        document.querySelectorAll('.generation-step')[4].querySelector('.step-icon i').className = 'fas fa-check-circle';
+                    }
+                } else {
+                    clearInterval(interval);
+                    
+                    // 최종 단계 완료 표시
+                    document.querySelectorAll('.generation-step')[5].classList.remove('in-progress');
+                    document.querySelectorAll('.generation-step')[5].classList.add('completed');
+                    document.querySelectorAll('.generation-step')[5].querySelector('.step-icon i').className = 'fas fa-check-circle';
+                    
+                    addLogEntry('14:37:10', '최종 검토 완료');
+                    addLogEntry('14:37:15', '보고서 생성 완료!');
+                    
+                    // 다운로드 버튼 표시
+                    continueBtn.style.display = 'block';
+                    cancelBtn.style.display = 'none';
+                    
+                    // 완료 메시지 업데이트
+                    document.querySelector('.generation-message p').innerHTML = '<i class="fas fa-check-circle"></i> 보고서 생성이 완료되었습니다!';
+                    document.querySelector('.generation-message').classList.add('completed');
+                }
+            }, 1000);
+        }
+        
+        function addLogEntry(time, message) {
+            const logContainer = document.querySelector('.log-container');
+            const logEntry = document.createElement('div');
+            logEntry.className = 'log-entry';
+            logEntry.innerHTML = `
+                <span class="log-time">${time}</span>
+                <span class="log-message">${message}</span>
+            `;
+            logContainer.appendChild(logEntry);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60">
+  <!-- 배경 모양 -->
+  <rect x="5" y="10" width="40" height="40" rx="8" fill="#4b8e70" />
+  
+  <!-- 문서 아이콘 -->
+  <path d="M15 20 L35 20 L35 40 L15 40 Z" fill="white" />
+  <path d="M19 25 L31 25 M19 30 L31 30 M19 35 L27 35" stroke="#4b8e70" stroke-width="2" stroke-linecap="round" />
+  
+  <!-- AI 마크 -->
+  <circle cx="35" cy="20" r="10" fill="#6ba588" />
+  <text x="35" y="24" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">AI</text>
+  
+  <!-- 로고 텍스트 -->
+  <text x="60" y="30" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#3a6d55">AI 공무원 보고서</text>
+  <text x="60" y="45" font-family="Arial, sans-serif" font-size="12" fill="#4b8e70">작성 도우미</text>
+</svg>

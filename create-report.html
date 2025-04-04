@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보고서 정보 입력 - AI 공무원 보고서 작성 도우미</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/images/logo.svg" alt="AI 공무원 보고서 작성 도우미 로고">
+                <h1>AI 공무원 보고서 작성 도우미</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> 홈</a></li>
+                    <li><a href="#" class="active"><i class="fas fa-file-alt"></i> 내 보고서</a></li>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> 고객지원</a></li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="profile-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-dropdown">
+                    <span>홍길동님</span>
+                    <i class="fas fa-chevron-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fas fa-user"></i> 내 프로필</a>
+                        <a href="#"><i class="fas fa-cog"></i> 설정</a>
+                        <a href="#"><i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="form-page">
+        <div class="container">
+            <div class="page-header">
+                <h2>보고서 정보 입력</h2>
+                <p>새 보고서 작성을 위한 기본 정보를 입력해주세요.</p>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-step active">
+                    <div class="step-number">1</div>
+                    <div class="step-label">정보 입력</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-number">2</div>
+                    <div class="step-label">목차 생성</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">양식 선택</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-number">4</div>
+                    <div class="step-label">보고서 생성</div>
+                </div>
+                <div class="progress-line"></div>
+                <div class="progress-step">
+                    <div class="step-number">5</div>
+                    <div class="step-label">다운로드</div>
+                </div>
+            </div>
+
+            <form id="reportInfoForm" class="report-form">
+                <div class="form-section">
+                    <h3>기본 정보</h3>
+                    <div class="form-group">
+                        <label for="reportTitle">보고서 제목 <span class="required">*</span></label>
+                        <input type="text" id="reportTitle" name="reportTitle" required placeholder="예: 2024년 상반기 업무 보고서">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="authorName">작성자 이름 <span class="required">*</span></label>
+                            <input type="text" id="authorName" name="authorName" required placeholder="예: 홍길동">
+                        </div>
+                        <div class="form-group">
+                            <label for="authorDepartment">부서명 <span class="required">*</span></label>
+                            <input type="text" id="authorDepartment" name="authorDepartment" required placeholder="예: 총무과">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reportDate">작성일 <span class="required">*</span></label>
+                        <input type="date" id="reportDate" name="reportDate" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>보고서 내용</h3>
+                    <div class="form-group">
+                        <label for="reportPurpose">작성 목적 <span class="required">*</span></label>
+                        <textarea id="reportPurpose" name="reportPurpose" required placeholder="보고서 작성 목적을 입력하세요."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reportSummary">주요 내용 요약 <span class="required">*</span></label>
+                        <textarea id="reportSummary" name="reportSummary" required placeholder="보고서의 주요 내용을 요약해서 입력하세요."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="keyIssues">주요 이슈 (선택사항)</label>
+                        <textarea id="keyIssues" name="keyIssues" placeholder="중요한 이슈나 문제점이 있다면 입력하세요."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>문서 설정</h3>
+                    <div class="form-group">
+                        <label>보고서 유형 <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="typeInternal" name="reportType" value="internal" checked>
+                                <label for="typeInternal">내부 보고서</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="typeExternal" name="reportType" value="external">
+                                <label for="typeExternal">외부 보고서</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="typeBriefing" name="reportType" value="briefing">
+                                <label for="typeBriefing">브리핑 자료</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>문서 형식 <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="formatHWP" name="documentFormat" value="hwp" checked>
+                                <label for="formatHWP">한글(HWP)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="formatPDF" name="documentFormat" value="pdf">
+                                <label for="formatPDF">PDF</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn btn-outline" onclick="location.href='index.html'">취소</button>
+                    <button type="submit" class="btn btn-primary" onclick="location.href='create-toc.html'; return false;">다음 단계</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.svg" alt="AI 공무원 보고서 작성 도우미 로고">
+                    <p>AI 공무원 보고서 작성 도우미</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-group">
+                        <h4>이용안내</h4>
+                        <ul>
+                            <li><a href="#">서비스 소개</a></li>
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">자주 묻는 질문</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>고객지원</h4>
+                        <ul>
+                            <li><a href="#">문의하기</a></li>
+                            <li><a href="#">피드백 제출</a></li>
+                            <li><a href="#">오류 신고</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-group">
+                        <h4>법적 정보</h4>
+                        <ul>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">개인정보 처리방침</a></li>
+                            <li><a href="#">저작권 정책</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI 공무원 보고서 작성 도우미. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/reports.js"></script>
+</body>
+</html>
